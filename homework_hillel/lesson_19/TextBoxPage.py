@@ -12,7 +12,7 @@ class TextBoxPage:
         self.full_email_field = (By.ID, "userEmail")
         self.full_current_text_area_field = (By.CSS_SELECTOR, "textarea#currentAddress")
         self.full_permanent_text_area_field = (
-        By.CSS_SELECTOR, "textarea#permanentAddress")  # для різноманіття, можна було по айті як попереднє
+            By.CSS_SELECTOR, "textarea#permanentAddress")  # для різноманіття, можна було по айті як попереднє
         self.submit_btn = (By.ID, "submit")
 
         self.result_fullname = (By.ID, "name")
