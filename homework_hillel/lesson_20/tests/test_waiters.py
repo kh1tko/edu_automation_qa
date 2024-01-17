@@ -33,7 +33,7 @@ class TestWaiters:
         self.driver.get("https://demoqa.com/dynamic-properties")
         colored_button_loc = (By.ID, "colorChange")
         colored_button: WebElement = self.driver.find_element(*colored_button_loc)
-        WebDriverWait(self.driver, 5).until(
+        WebDriverWait(self.driver, 10).until(
             ec.text_to_be_present_in_element_attribute(colored_button_loc, "class", "text-danger"))
         colored_button.click()
         assert colored_button.is_enabled()
