@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
+from selenium.webdriver.remote.webelement import WebElement
 
 
 class TextBoxPage:
@@ -11,7 +12,7 @@ class TextBoxPage:
         self.full_email_field = (By.ID, "userEmail")
         self.full_current_text_area_field = (By.CSS_SELECTOR, "textarea#currentAddress")
         self.full_permanent_text_area_field = (
-            By.CSS_SELECTOR, "textarea#permanentAddress")  # для різноманіття, можна було по айті як попереднє
+        By.CSS_SELECTOR, "textarea#permanentAddress")  # для різноманіття, можна було по айті як попереднє
         self.submit_btn = (By.ID, "submit")
 
         self.result_fullname = (By.ID, "name")
@@ -35,6 +36,9 @@ class TextBoxPage:
     def fill_email_field(self, text: str) -> None:
         self.driver.find_element(*self.full_email_field).send_keys(text)
 
+    def get_email_field_element(self) -> WebElement:
+        return self.driver.find_element(*self.full_email_field)
+
     def clear_current_address_field(self) -> None:
         self.driver.find_element(*self.full_current_text_area_field).clear()
 
@@ -53,7 +57,7 @@ class TextBoxPage:
     def get_result_fullname(self):
         return self.driver.find_element(*self.result_fullname).text
 
-    def get_result_email(self):
+    def get_result_email(self) -> WebDriver:
         return self.driver.find_element(*self.result_email).text
 
     def get_result_current_address(self):
