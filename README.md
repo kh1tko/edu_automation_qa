@@ -1,1 +1,1 @@
-This is my homewok. Python & QA Automation
+This is my homework. Python & QA Automation
