@@ -1,0 +1,5 @@
+---Result function counts---
+
+
+Input numbers: 458, 877, 98  --->  Result: 130830
+Input numbers: 45, 87, 8  --->  Result: 1056
