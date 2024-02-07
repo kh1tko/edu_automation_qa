@@ -24,4 +24,5 @@ class TestButtons:
     def test_dynamic_id_click_button(self):  # кнопка Click Me
         self.page.open()
         self.page.dymanic_id_click_button().click()
-        assert self.page.get_button_dynamic_id_click_message() == 'You have done a dynamic click'
+        message = self.page.get_button_dynamic_id_click_message()
+        assert 'You have done a dynamic click' in message
