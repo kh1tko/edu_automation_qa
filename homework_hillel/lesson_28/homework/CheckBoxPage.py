@@ -1,4 +1,3 @@
-import selenium.webdriver.common.devtools.v85.database
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 
