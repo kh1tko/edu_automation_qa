@@ -20,8 +20,7 @@ class CheckboxPage:
 
     def mark_folder(self, name):
         mark = self.driver.find_element(By.XPATH,
-                                        f"//label[contains(@for, 'tree-node-{name}')]//*[contains(@class, 'rct-icon-uncheck')]"
-                                        )
+                                        f"//label[contains(@for, 'tree-node-{name}')]//*[contains(@class, 'rct-icon-uncheck')]")
         mark.click()
 
     def get_result_check_folder(self):
