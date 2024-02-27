@@ -31,7 +31,7 @@ def get_url(n):
         scrape_and_write_data(driver)
 
 
-# Количество прогонов страниц (n + 1) можно передать в get_url, столько будет прогонов
+# The number of page runs (n + 1) can be passed to get_url, this will be the number of runs
 n = 5
 get_url(n + 1)
 driver.quit()
